@@ -1,158 +1,17 @@
-:root {
-  --bg: #0f1116;
-  --panel: #181a20;
-  --text: #f5f6fa;
-  --accent: #7367f0;
-  --muted: #9c9da3;
-}
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: "Poppins", sans-serif;
-}
-
-body {
-  display: flex;
-  height: 100vh;
-  background: var(--bg);
-  color: var(--text);
-}
-
-/* Sidebar */
-.sidebar {
-  width: 230px;
-  background: linear-gradient(180deg, #222433, #1a1b25);
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  padding: 25px 15px;
-}
-
-.logo {
-  text-align: center;
-  font-weight: 600;
-  margin-bottom: 30px;
-}
-
-.menu {
-  list-style: none;
-}
-
-.menu li {
-  padding: 12px 15px;
-  margin: 6px 0;
-  border-radius: 8px;
-  cursor: pointer;
-  transition: 0.3s;
-}
-
-.menu li:hover,
-.menu li.active {
-  background: var(--accent);
-  color: #fff;
-}
-
-.logout {
-  margin-top: 30px;
-  color: #ffb4b4;
-}
-
-/* Main */
-.main {
-  flex: 1;
-  padding: 25px 35px;
-  overflow-y: auto;
-}
-
-/* Header */
-.topbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 30px;
-}
-
-.greeting h1 {
-  font-size: 1.6em;
-  color: var(--accent);
-}
-
-.clock {
-  font-size: 1.8em;
-  font-weight: 600;
-}
-
-/* Widgets Grid */
-.widgets {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 20px;
-}
-
-/* Widget Card */
-.widget {
-  background: var(--panel);
-  padding: 20px;
-  border-radius: 15px;
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
-  transition: background 0.5s;
-}
-
-/* Weather */
-.weather input,
-.todo input {
-  width: 100%;
-  padding: 8px 10px;
-  margin-top: 10px;
-  border-radius: 6px;
-  border: none;
-  outline: none;
-}
-
-.weather button,
-.todo button,
-.focus button {
-  margin-top: 8px;
-  background: var(--accent);
-  color: #fff;
-  border: none;
-  border-radius: 20px;
-  padding: 8px 15px;
-  cursor: pointer;
-  transition: 0.3s;
-}
-.weather button:hover,
-.todo button:hover,
-.focus button:hover {
-  opacity: 0.8;
-}
-
-/* Notes */
-.notes textarea {
-  width: 100%;
-  height: 120px;
-  background: #1f212b;
-  border: none;
-  color: var(--text);
-  padding: 10px;
-  border-radius: 8px;
-  resize: none;
-}
-
-/* Timer */
-#timerDisplay {
-  font-size: 2em;
-  text-align: center;
-  margin: 10px 0;
-}
-
-/* Timeline */
-.timeline-container {
-  height: 150px;
-  overflow-y: auto;
-  background: #1f212b;
-  border-radius: 10px;
-  padding: 10px;
-}
+:root{--bg:#0f1116;--panel:#181a20;--text:#f5f6fa;--accent:#7367f0;--muted:#9c9da3}
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif}
+body{display:flex;height:100vh;background:var(--bg);color:var(--text)}
+.sidebar{width:230px;background:linear-gradient(180deg,#222433,#1a1b25);display:flex;flex-direction:column;padding:25px 15px}
+.logo{text-align:center;font-weight:600;margin-bottom:30px}
+.menu{list-style:none}
+.menu li{padding:12px 15px;margin:6px 0;border-radius:8px;cursor:pointer;transition:.3s}
+.menu li:hover,.menu li.active{background:var(--accent);color:#fff}
+.main{flex:1;padding:25px 35px;overflow-y:auto}
+.topbar{display:flex;justify-content:space-between;align-items:center;margin-bottom:30px}
+.greeting h1{font-size:1.6em;color:var(--accent)}
+.clock{font-size:1.8em;font-weight:600}
+.widgets{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:20px}
+.widget{background:var(--panel);padding:20px;border-radius:15px;box-shadow:0 0 15px rgba(0,0,0,.4);animation:pop .4s ease}
+button{background:var(--accent);border:none;border-radius:20px;padding:8px 14px;color:#fff;cursor:pointer;margin-top:10px}
+button:hover{opacity:.9}
+@keyframes pop{from{opacity:0;transform:translateY(6px) scale(.98)}to{opacity:1;transform:translateY(0) scale(1)}}
