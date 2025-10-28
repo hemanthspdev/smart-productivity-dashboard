@@ -1,0 +1,54 @@
+const modal = document.getElementById('taskModal');
+const newTaskBtn = document.getElementById('newTaskBtn');
+const closeModal = document.getElementById('closeModal');
+const saveTask = document.getElementById('saveTask');
+const taskList = document.getElementById('taskList');
+
+let tasks = JSON.parse(localStorage.getItem('tasks') || '[]');
+
+// Open modal
+newTaskBtn.onclick = () => modal.style.display = 'flex';
+closeModal.onclick = () => modal.style.display = 'none';
+
+// Render tasks
+function renderTasks() {
+  taskList.innerHTML = '';
+  tasks.forEach((t, i) => {
+    const div = document.createElement('div');
+    div.className = 'task-card';
+    div.innerHTML = `
+      <h3>${t.title}</h3>
+      <p>${t.category || 'No category'} • ${t.date || ''} ${t.time || ''}</p>
+      <div class="actions">
+        <button onclick="toggleDone(${i})">${t.done ? '✅ Done' : 'Mark Done'}</button>
+        <button onclick="deleteTask(${i})">Delete</button>
+      </div>
+    `;
+    if (t.done) div.style.opacity = 0.5;
+    taskList.appendChild(div);
+  });
+  localStorage.setItem('tasks', JSON.stringify(tasks));
+}
+
+saveTask.onclick = () => {
+  const title = document.getElementById('taskTitle').value.trim();
+  if (!title) return alert('Title required');
+  const category = document.getElementById('taskCategory').value;
+  const date = document.getElementById('taskDate').value;
+  const time = document.getElementById('taskTime').value;
+  tasks.push({ title, category, date, time, done: false });
+  modal.style.display = 'none';
+  document.querySelectorAll('.modal input').forEach(i => i.value = '');
+  renderTasks();
+};
+
+function deleteTask(i) {
+  tasks.splice(i, 1);
+  renderTasks();
+}
+function toggleDone(i) {
+  tasks[i].done = !tasks[i].done;
+  renderTasks();
+}
+
+renderTasks();

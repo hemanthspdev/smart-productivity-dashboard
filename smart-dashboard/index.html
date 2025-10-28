@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Smart Productivity Dashboard</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Sidebar -->
+  <aside class="sidebar">
+    <h2 class="logo">MySpace</h2>
+    <ul class="menu">
+      <li class="active">🏠 Dashboard</li>
+      <li>✅ Tasks</li>
+      <li>☁️ Weather</li>
+      <li>📝 Notes</li>
+      <li>⏱ Focus</li>
+      <li>📊 Timeline</li>
+      <li class="logout">🚪 Logout</li>
+    </ul>
+  </aside>
+
+  <!-- Main Area -->
+  <main class="main">
+    <header class="topbar">
+      <div class="greeting">
+        <h1 id="greetText">Good Evening 🌙</h1>
+        <p id="currentDate">Tuesday, 28 October 2025</p>
+      </div>
+      <div class="clock" id="clock">00:00:00</div>
+    </header>
+
+    <section class="widgets">
+      <!-- Weather Widget -->
+      <div class="widget weather" id="weatherWidget">
+        <h3>Weather</h3>
+        <input type="text" id="cityInput" placeholder="Enter city..." />
+        <button id="getWeather">Get Weather</button>
+        <p id="weatherInfo">No data</p>
+      </div>
+
+      <!-- To-Do List Widget -->
+      <div class="widget todo">
+        <h3>To-Do List</h3>
+        <ul id="taskList"></ul>
+        <input type="text" id="newTask" placeholder="Add new task..." />
+        <button id="addTask">Add</button>
+      </div>
+
+      <!-- Notes Widget -->
+      <div class="widget notes">
+        <h3>Notes</h3>
+        <textarea id="notesArea" placeholder="Write your notes here..."></textarea>
+      </div>
+
+      <!-- Focus Timer -->
+      <div class="widget focus">
+        <h3>Focus Timer</h3>
+        <div id="timerDisplay">25:00</div>
+        <div class="timer-buttons">
+          <button id="startTimer">Start</button>
+          <button id="pauseTimer">Pause</button>
+          <button id="resetTimer">Reset</button>
+        </div>
+      </div>
+
+      <!-- Timeline Widget -->
+      <div class="widget timeline">
+        <h3>Daily Timeline</h3>
+        <div class="timeline-container" id="timelineContainer"></div>
+      </div>
+    </section>
+  </main>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

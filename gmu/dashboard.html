@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>User Dashboard</title>
+  <link rel="stylesheet" href="dashboard.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="sidebar">
+    <h2>MySpace</h2>
+    <ul>
+      <li class="active">🏠 Dashboard</li>
+      <li>☁️ Weather</li>
+      <li>📝 To-Do List</li>
+      <li>📒 Notes</li>
+      <li>⚙️ Settings</li>
+      <li class="logout" onclick="window.location.href='index.html'">🚪 Logout</li>
+    </ul>
+  </div>
+
+  <div class="main-content">
+    <header>
+      <h1>Welcome Back 👋</h1>
+      <div class="user-info">
+        <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" alt="User Avatar">
+        <span>Username</span>
+      </div>
+    </header>
+
+    <section class="widgets">
+      <div class="widget weather-widget">
+        <h3>Weather</h3>
+        <p>📍 Location: <span id="location">—</span></p>
+        <p>🌤 Temperature: <span id="temp">—°C</span></p>
+        <button id="getWeather">Get Weather</button>
+      </div>
+
+      <div class="widget todo-widget">
+        <h3>To-Do List</h3>
+        <ul id="todoList">
+          <li><input type="checkbox"> Complete design</li>
+          <li><input type="checkbox"> Study JavaScript</li>
+        </ul>
+        <input type="text" id="newTask" placeholder="Add new task...">
+        <button id="addTask">Add</button>
+      </div>
+    </section>
+  </div>
+  <script src="dashboard.js"></script>
+</body>
+</html>

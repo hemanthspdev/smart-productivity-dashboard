@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Focus | MySpace</title>
+  <link rel="stylesheet" href="css/focus.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <aside class="sidebar">
+    <h2>MySpace</h2>
+    <ul>
+      <li onclick="location.href='index.html'">🏠 Dashboard</li>
+      <li onclick="location.href='tasks.html'">✅ Tasks</li>
+      <li onclick="location.href='weather.html'">☁️ Weather</li>
+      <li onclick="location.href='notes.html'">📝 Notes</li>
+      <li class="active">⏱ Focus</li>
+      <li onclick="location.href='timeline.html'">📊 Timeline</li>
+    </ul>
+  </aside>
+
+  <main class="main">
+    <h1>Focus Timer</h1>
+    <div class="timer-box">
+      <h2 id="timerDisplay">25:00</h2>
+      <div class="controls">
+        <button id="startBtn">Start</button>
+        <button id="pauseBtn">Pause</button>
+        <button id="resetBtn">Reset</button>
+      </div>
+      <div class="custom-time">
+        <label>Custom Time:</label>
+        <input type="number" id="minutesInput" placeholder="Minutes" min="1" max="180">
+        <button id="setTimeBtn">Set</button>
+      </div>
+      <div class="session-input">
+        <input type="text" id="sessionName" placeholder="What are you focusing on? (optional)">
+      </div>
+    </div>
+    <section id="sessionList" class="session-list"></section>
+  </main>
+
+  <script src="js/focus.js"></script>
+  <script src="js/guard.js"></script>
+</body>
+</html>

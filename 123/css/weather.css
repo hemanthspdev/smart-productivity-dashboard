@@ -1,0 +1,14 @@
+body{display:flex;background:#0f1116;color:#fff;font-family:'Poppins',sans-serif}
+.sidebar{width:220px;background:linear-gradient(180deg,#1c1d27,#111217);padding:25px 15px}
+.sidebar ul{list-style:none;padding:0}
+.sidebar li{padding:12px 10px;border-radius:8px;margin:5px 0;cursor:pointer;transition:.3s}
+.sidebar li.active,.sidebar li:hover{background:#7367f0}
+.main{flex:1;padding:40px}
+.weather-box{background:#1d1e27;border-radius:10px;padding:25px;width:320px;text-align:center;box-shadow:0 0 15px rgba(0,0,0,.4);transition:.4s}
+.weather-box input{width:100%;padding:10px;border-radius:8px;border:none;margin-bottom:10px;outline:none}
+.weather-box button{background:#7367f0;border:none;border-radius:20px;padding:8px 15px;color:#fff;cursor:pointer;margin-bottom:15px}
+.weather-result p{line-height:1.6em}
+.sunny{background:linear-gradient(135deg,#f7c96c,#e67e22)}
+.rainy{background:linear-gradient(135deg,#3a4a8f,#1f232d)}
+.cloudy{background:linear-gradient(135deg,#555b7a,#1f232d)}
+.night{background:linear-gradient(135deg,#2b2c3d,#0d0f15)}

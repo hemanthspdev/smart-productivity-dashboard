@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard | MySpace</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <aside class="sidebar">
+    <h2 class="logo">MySpace</h2>
+    <ul class="menu">
+      <li class="active">🏠 Dashboard</li>
+      <li onclick="location.href='tasks.html'">✅ Tasks</li>
+      <li onclick="location.href='weather.html'">☁️ Weather</li>
+      <li onclick="location.href='notes.html'">📝 Notes</li>
+      <li onclick="location.href='focus.html'">⏱ Focus</li>
+      <li onclick="location.href='timeline.html'">📊 Timeline</li>
+    </ul>
+  </aside>
+
+  <main class="main">
+    <header class="topbar">
+      <div class="greeting">
+        <h1 id="greetText">Hello</h1>
+        <p id="currentDate">—</p>
+        <p id="userName"></p>
+      </div>
+      <div class="clock" id="clock">00:00:00</div>
+    </header>
+
+    <section class="widgets">
+      <div class="widget weather">
+        <h3>Weather</h3>
+        <p id="weatherInfo">No city selected</p>
+        <button onclick="location.href='weather.html'">Change City</button>
+      </div>
+
+      <div class="widget todo">
+        <h3>Upcoming Tasks</h3>
+        <ul id="todoPreview"></ul>
+        <button onclick="location.href='tasks.html'">Open Tasks</button>
+      </div>
+
+      <div class="widget notes">
+        <h3>Notes</h3>
+        <p id="notesPreview">No notes yet</p>
+        <button onclick="location.href='notes.html'">Open Notes</button>
+      </div>
+
+      <div class="widget focus">
+        <h3>Focus Timer</h3>
+        <div id="focusDisplay">25:00</div>
+        <div>
+          <button onclick="location.href='focus.html'">Open Focus</button>
+        </div>
+      </div>
+
+      <div class="widget timeline">
+        <h3>Today’s Timeline</h3>
+        <div id="timelineContainer"></div>
+        <button onclick="location.href='timeline.html'">View Full</button>
+      </div>
+    </section>
+  </main>
+
+  <script src="js/script.js"></script>
+  <script src="js/guard.js"></script>
+</body>
+</html>

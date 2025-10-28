@@ -1,0 +1,12 @@
+body{display:flex;background:#0f1116;color:#fff;font-family:'Poppins',sans-serif}
+.sidebar{width:220px;background:linear-gradient(180deg,#1c1d27,#111217);padding:25px 15px}
+.sidebar ul{list-style:none;padding:0}
+.sidebar li{padding:12px 10px;border-radius:8px;margin:5px 0;cursor:pointer;transition:.3s}
+.sidebar li.active,.sidebar li:hover{background:#7367f0}
+.main{flex:1;padding:40px;overflow-y:auto}
+h1{margin-bottom:25px}
+.timeline-container{background:#1d1e27;border-radius:12px;padding:20px;height:80vh;overflow-y:scroll;position:relative;box-shadow:0 0 15px rgba(0,0,0,.4)}
+.hour{position:relative;border-left:2px solid #333;height:60px;padding-left:50px;display:flex;align-items:center;color:#888}
+.hour::before{content:attr(data-hour);position:absolute;left:10px;color:#666;font-size:.9em}
+.session{position:absolute;left:100px;right:30px;background:linear-gradient(90deg,#7367f0,#4a4ff3);border-radius:10px;padding:10px;color:#fff;font-size:.9em;box-shadow:0 3px 10px rgba(0,0,0,.3);animation:fadeIn .5s ease}
+@keyframes fadeIn{from{opacity:0;transform:translateY(5px)}to{opacity:1;transform:translateY(0)}}
